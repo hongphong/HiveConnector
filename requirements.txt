@@ -1,0 +1,7 @@
+pymongo==3.6.0
+numpy==1.13.3
+mysql-connector-python==2.0.4
+MySQL-python==1.2.5
+sqlalchemy==1.0.6
+tldextract==1.6
+PyHive==0.5.0

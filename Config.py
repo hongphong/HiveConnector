@@ -74,6 +74,12 @@ class Main():
 
     }
 
+    REDIS_CONNECTION = {
+        'host': "192.168.21.30",
+        'port': '6379',
+        'default_db': 0
+    }
+
     """
         config mail to sent error log
     """
@@ -87,3 +93,4 @@ class Main():
         ],
         'credentials': [],
     }
+
