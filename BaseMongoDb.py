@@ -310,28 +310,19 @@ class BaseMongoDb(object):
                 '$match': match
             }
         ]
-        max_value = collection.aggregate(aggregate + [
+        query = collection.aggregate(aggregate + [
             {
                 '$group': {
                     '_id': None,
-                    'max': {'$max': '$%s' % field}
-                }
-            }
-        ])
-
-        max_value = list(max_value)
-        max_value = max_value[0]['max'] if max_value else None
-
-        min_value = collection.aggregate(aggregate + [
-            {
-                '$group': {
-                    '_id': None,
+                    'max': {'$max': '$%s' % field},
                     'min': {'$min': '$%s' % field}
                 }
             }
         ])
-        min_value = list(min_value)
-        min_value = min_value[0]['min'] if min_value else None
+
+        query = list(query)
+        max_value = query[0]['max'] if query else None
+        min_value = query[0]['min'] if query else None
 
         return {
             'max': max_value,
