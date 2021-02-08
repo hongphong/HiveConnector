@@ -21,7 +21,7 @@ google-api-python-client==1.6.2
 google-auth==1.5.0
 google-auth-oauthlib==0.2.0
 googleads==10.1.0
-httplib2==0.11.1
+httplib2==0.19.0
 idna==2.6
 ipaddress==1.0.22
 isodate==0.6.0
