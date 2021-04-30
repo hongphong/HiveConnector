@@ -53,7 +53,7 @@ requests==2.18.4
 requests-file==1.4
 requests-oauthlib==1.0.0
 requests-toolbelt==0.8.0
-rsa==3.4.2
+rsa==4.7
 sasl==0.2.1
 six==1.11.0
 SQLAlchemy==1.0.12
